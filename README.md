@@ -1,26 +1,25 @@
 # Sycamore Promo (Next.js 14 + Tailwind, RTL)
 
-Минимальный шаблон промо-сайта (иврит, RTL) с формой лида на server actions.
+Minimal promo site template (Hebrew, RTL) with lead form using server actions.
 
-## Быстрый старт
+## Quick Start
 ```bash
-pnpm i # или npm install / yarn
+pnpm i # or npm install / yarn
 cp .env.example .env
-# при локальной разработке можно оставить TURNSTILE пустым — форма будет работать в dev
-pnpm dev # или npm run dev
+# for local development you can leave TURNSTILE empty — form will work in dev
+pnpm dev # or npm run dev
 ```
 
-Открой: http://localhost:3000
+Open: http://localhost:3000
 
-## Стек
+## Stack
 - Next.js 14 (App Router)
 - TypeScript, Tailwind
-- RTL (dir="rtl"), шрифт Heebo
+- RTL (dir="rtl"), Heebo font
 - Server Actions + Zod
-- Turnstile verify (dev-мок), Resend (опционально)
+- Turnstile verify (dev mock), Resend (optional)
 
-## Продакшен
-1. Заполни `.env` (RESEND, TURNSTILE).
-2. Деплой на Vercel.
-3. Включи Analytics/OG/SEO по желанию.
-# sycamore-promo
+## Production
+1. Fill `.env` (RESEND, TURNSTILE).
+2. Deploy to Vercel.
+3. Enable Analytics/OG/SEO as needed.
