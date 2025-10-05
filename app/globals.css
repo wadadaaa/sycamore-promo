@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+}
+html[dir="rtl"] body {
+  font-feature-settings: "ss01" on;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+.section {
+  @apply py-14 md:py-20;
+}
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition;
+  @apply bg-black text-white hover:bg-zinc-800;
+}
+.btn-outline {
+  @apply border border-zinc-300 bg-white text-zinc-900 hover:bg-zinc-50 rounded-xl px-5 py-3 text-sm font-semibold;
+}
+.muted { @apply text-zinc-500; }
