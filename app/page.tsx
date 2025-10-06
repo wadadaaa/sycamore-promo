@@ -92,7 +92,7 @@ export default function Page() {
               {/* spacer to push CTA if added later */}
               <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
                 <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm text-center">קבלו הצעה</a>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
+                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
               </div>
             </div>
 
@@ -115,7 +115,7 @@ export default function Page() {
               </ul>
               <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
                 <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
+                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function Page() {
               </ul>
               <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
                 <a href="#contact" className="btn inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
+                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
               </div>
             </div>
 
@@ -166,7 +166,7 @@ export default function Page() {
               </ul>
               <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
                 <a href="#contact" className="btn inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
+                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function Page() {
               </ul>
               <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
                 <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
+                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
               </div>
             </div>
 
@@ -215,7 +215,7 @@ export default function Page() {
               </ul>
               <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
                 <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
+                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
               </div>
             </div>
           </div>
@@ -296,7 +296,7 @@ export default function Page() {
                   <Phone className="w-4 h-4 text-zinc-500" aria-hidden />
                   <span className="text-zinc-500">טלפון</span>
                 </div>
-                <a href="tel:031234567" className="font-medium hover:underline">03-1234567</a>
+                <a href="tel:0546314848" className="font-medium hover:underline">0546314848</a>
               </li>
               <li className="flex items-center justify-between md:justify-start gap-3">
                 <div className="flex items-center gap-2">
@@ -322,9 +322,9 @@ export default function Page() {
             </ul>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-2">
-              <a href="tel:031234567" className="btn-outline sm:flex-1 text-center" aria-label="התקשרו אלינו">התקשרו</a>
+              <a href="tel:0546314848" className="btn-outline sm:flex-1 text-center" aria-label="התקשרו אלינו">התקשרו</a>
               <a href="mailto:hello@sycamore.co.il" className="btn-outline sm:flex-1 text-center" aria-label="כתבו לנו אימייל">מייל</a>
-              <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="btn sm:flex-1 text-center" aria-label="פתיחת WhatsApp">WhatsApp</a>
+              <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="btn sm:flex-1 text-center" aria-label="פתיחת WhatsApp">WhatsApp</a>
             </div>
 
             <p className="text-xs text-zinc-500 mt-3">מענה מהיר ב-WhatsApp ובשעות הפעילות בטלפון.</p>
@@ -336,7 +336,7 @@ export default function Page() {
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t p-3">
         <div className="container flex gap-3">
           <a href="#contact" className="btn flex-1 text-center">קבלו הצעה</a>
-          <a href="https://wa.me/972501234567" target="_blank" rel="noreferrer" className="btn-outline flex-1 text-center">WhatsApp</a>
+          <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="btn-outline flex-1 text-center">WhatsApp</a>
         </div>
       </div>
 
