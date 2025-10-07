@@ -11,18 +11,18 @@ export default function Page() {
         <div className="container grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              אדריכלות רישוי חכמה שמקצרת זמן לאישור
+                נספחים סניטריים - תכנון פרויקטים בתחום אינסטלציה
             </h1>
             <p className="muted text-lg">
-              אוספים, מגישים, עוקבים — ואתם מתמקדים בתכנון. ממוצע 21 ימים לאישור, 98% הצלחה.
+              אוספים, מגישים, עוקבים — ואתם מתמקדים בקבלת אישורים מול תאגיד וגורמים אחרים.
             </p>
             <div className="flex gap-3">
               <a href="#contact" className="btn">קבלו שיחה חוזרת</a>
               <a href="#process" className="btn-outline">כך זה עובד</a>
             </div>
             <div className="flex gap-6 pt-4 text-sm">
-              <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 98% הצלחה</div>
-              <div className="flex items-center gap-2"><Clock className="w-5 h-5" /> בממוצע 21 ימים</div>
+              <div className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> 100% הצלחה</div>
+              <div className="flex items-center gap-2"><Clock className="w-5 h-5" /> החל מ-30 ימים עד לקבלת אישור</div>
             </div>
           </div>
           <div className="rounded-2xl border p-6">
@@ -37,20 +37,57 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Domain / Scope */}
+      <section id="domain" className="section">
+        <div className="container">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8">תחום העיסוק</h2>
+          <p className="muted max-w-3xl mb-6">
+          אנחנו מהנדסים  עם נסיון רב שנתי בתכנון מערכות אינסטלציה בפרויקטים שונים.  מלווים פרויקטים משלב התכנון ועד לקבלת האישורים הנדרשים   
+          </p>
+          <div className="grid md:grid-cols-4 gap-4">
+            <div className="rounded-2xl border p-6 bg-white">
+            <h3 className="font-semibold text-lg">ביוב</h3>
+            <p className="muted mt-2 text-sm">תכנון מערכות דלוחין/שופכין על פי תקנים ישראלים (הל׳׳ת, ת׳י 1205)</p>
+            </div>
+            <div className="rounded-2xl border p-6 bg-white">
+              <h3 className="font-semibold text-lg">מים</h3>
+              <p className="muted mt-2 text-sm">תכנון מערכות מים לפי שיטות Pexgol/ SP/ Multigol</p>
+              <p className="muted mt-2 text-sm">תכנון מערכות כיבוי אש</p>
+            </div>
+            <div className="rounded-2xl border p-6 bg-white">
+              <h3 className="font-semibold text-lg">ניקוז</h3>
+              <p className="muted mt-2 text-sm">תכנון מערכות ניקוז/תעול</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
       <section id="services" className="section bg-zinc-50">
         <div className="container">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">שירותים עיקריים</h2>
-          <div className="grid md:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {[
-              { title: "היתר בנייה", desc: "איסוף חכם, הגשה מסודרת ומעקב." },
-              { title: "טופס 4", desc: "סגירת התיקים והשלמות." },
-              { title: "שינוי ייעוד", desc: "תיאומים וסטטוס מול רשות." },
-              { title: "סניטריה/תשתיות", desc: "תכניות, אישורים ויועצים." },
+              { title: "נספח סניטרי (הגשה סניטרית)", desc: "נכין לכם נספח סניטרי מלא בהתאם לכל הדרישות של התאגיד או גורמים נוספים" },
+              { 
+                title: "פתרונות תכנון ייעודיים", 
+                desc: (
+                  <>
+                    <span>לא צריכים נספח סניטרי מלא? אפשר לבחור פתרון לבעיה הספציפית שלכם:</span>
+                    <ul className="list-disc pr-5 mt-2 space-y-1 text-right text-sm text-zinc-600">
+                      <li>חישוב ספיקות</li>
+                      <li>חישוב מאגרים</li>
+                      <li>סכמת מים</li>
+                      <li>פתרונות לגגות כחולים</li>
+                      <li>תכנית ניקוז לפי תכנית הידרולוגיה</li>
+                    </ul>
+                  </>
+                )
+              }
             ].map((s) => (
               <div key={s.title} className="rounded-2xl border p-6 bg-white">
                 <h3 className="font-semibold text-lg">{s.title}</h3>
-                <p className="muted mt-2">{s.desc}</p>
+                <div className="muted mt-2">{s.desc}</div>
               </div>
             ))}
           </div>
@@ -235,7 +272,7 @@ export default function Page() {
             {[
               { icon: Upload, title: "איסוף", desc: "מקבלים מכם תכניות ומסמכים." },
               { icon: FileText, title: "הגשה", desc: "מייצרים חבילת הגשה מלאה." },
-              { icon: Clock, title: "מעקב 21 ימים", desc: "תיקונים מהירים ועד האישור." },
+              { icon: Clock, title: "מעקב", desc: "תיקונים מהירים ועד האישור." },
             ].map((s) => (
               <div key={s.title} className="rounded-2xl border p-6">
                 <s.icon className="w-6 h-6 mb-2" />
