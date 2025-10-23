@@ -101,168 +101,268 @@ export default function Page() {
           <p className="muted max-w-3xl mb-6">
             המחירים להלן הינם טווחי הערכה ראשוניים בלבד, ההצעה הסופית תינתן לאחר בחינת הנתונים והמסמכים.
           </p>
-          {/* two-column headers */}
-          <div className="grid md:grid-cols-2 gap-8 items-start mb-2">
-            <h3 className="text-xl font-bold md:mb-0 mb-4 text-right">בית פרטי</h3>
-            <h3 className="text-xl font-bold md:mb-0 mb-4">בית משותף</h3>
+
+          {/* Matrix pricing: Type vs. Approvals */}
+          <div className="rounded-2xl border overflow-hidden bg-white">
+            {/* Header row */}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] text-sm font-semibold bg-zinc-50">
+              <div className="p-3 hidden md:block"></div>
+              <div className="p-3 text-center border-b md:border-b-0">
+                <div className="font-semibold">ללא אישורים</div>
+                <div className="text-xs font-normal text-zinc-500 mt-0.5">תכנון בלבד</div>
+              </div>
+              <div className="p-3 text-center">
+                <div className="font-semibold">עם אישורים</div>
+                <div className="text-xs font-normal text-zinc-500 mt-0.5">כולל נספח + הגשה</div>
+              </div>
+            </div>
+
+            {/* Row: בית פרטי */}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] border-t">
+              <div className="p-3 md:p-4 font-semibold bg-zinc-50 md:bg-white text-center md:text-right">
+                בית פרטי
+              </div>
+              
+              {/* Without approvals */}
+              <div className="p-4 border-t md:border-t-0 md:border-r">
+                <div className="text-lg font-semibold mb-2">₪4,000–₪7,000</div>
+                <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
+                  <li>תכנון בסיסי (מים/ביוב/ניקוז)</li>
+                  <li>סכמות ועקרונות</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn-outline text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              {/* With approvals */}
+              <div className="p-4 border-t md:border-t-0 bg-zinc-50/30">
+                <div className="text-lg font-semibold mb-2">₪7,000–₪12,000</div>
+                <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
+                  <li>כולל הכנת נספח סניטרי</li>
+                  <li>הגשה ומעקב עד אישור</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Row: בניין מגורים משותף */}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] border-t">
+              <div className="p-3 md:p-4 font-semibold bg-zinc-50 md:bg-white text-center md:text-right">
+                בניין מגורים משותף
+              </div>
+              
+              {/* Without approvals */}
+              <div className="p-4 border-t md:border-t-0 md:border-r">
+                <div className="mb-2">
+                  <div className="text-lg font-semibold">₪2,000–₪2,600</div>
+                  <div className="text-xs text-zinc-500 mt-0.5">לח״ד</div>
+                  <div className="text-xs text-zinc-500">או ₪90,000–₪140,000 סכום קבוע</div>
+                </div>
+                <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
+                  <li>תכנון מערכות בניין משותף</li>
+                  <li>ללא תהליך אישורים מול תאגיד</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn-outline text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              {/* With approvals */}
+              <div className="p-4 border-t md:border-t-0 bg-zinc-50/30">
+                <div className="mb-2">
+                  <div className="text-lg font-semibold">₪3,000–₪3,500</div>
+                  <div className="text-xs text-zinc-500 mt-0.5">לח״ד</div>
+                  <div className="text-xs text-zinc-500">או ₪140,000–₪230,000 סכום קבוע</div>
+                </div>
+                <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
+                  <li>כולל נספח סניטרי מלא</li>
+                  <li>הגשה/תיקונים/מעקב עד אישור</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Row: בניין תעשייתי/מסחרי */}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] border-t">
+              <div className="p-3 md:p-4 font-semibold bg-zinc-50 md:bg-white text-center md:text-right">
+                בניין תעשייתי/מסחרי
+              </div>
+              
+              {/* Without approvals */}
+              <div className="p-4 border-t md:border-t-0 md:border-r">
+                <div className="text-lg font-semibold mb-2">₪90,000–₪180,000</div>
+                <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
+                  <li>תכנון מערכות לפי ייעוד</li>
+                  <li>ללא מסמכי אישור לרשויות</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn-outline text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              {/* With approvals */}
+              <div className="p-4 border-t md:border-t-0 bg-zinc-50/30">
+                <div className="text-lg font-semibold mb-2">₪140,000–₪260,000</div>
+                <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
+                  <li>כולל נספח/מפרט לרשויות</li>
+                  <li>הגשה/מעקב/עדכון מול תאגיד/עיריה</li>
+                </ul>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Row: Custom */}
+            <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] border-t">
+              <div className="p-3 md:p-4 font-semibold bg-zinc-50 md:bg-white text-center md:text-right">
+              תאם אישית
+              </div>
+              
+              {/* Without approvals */}
+              <div className="p-4 border-t md:border-t-0 md:border-r">
+                <div className="text-lg font-semibold mb-2">₪1,500–₪6,000 למסמך/חישוב</div>
+                <p className="text-sm text-zinc-700 mb-4">
+                  פתרון נקודתי ללא תהליך אישורים (לדוגמה: חישוב ספיקות, סכמת מים, חישוב מאגר).
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center">
+                  <a 
+                    href="#contact" 
+                    className="btn-outline text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              {/* With approvals */}
+              <div className="p-4 border-t md:border-t-0 bg-zinc-50/30">
+                <div className="text-lg font-semibold mb-2">₪4,000–₪12,000 לחבילה</div>
+                <p className="text-sm text-zinc-700 mb-4">
+                  תכנון + הכנת מסמכי אישור לרשות/תאגיד לפי דרישה (נספח, מפרט, תיאום יועצים).
+                </p>
+                  <div className="flex flex-col sm:flex-row gap-4 mt-auto items-center ">
+                  <a 
+                    href="#contact" 
+                    className="btn text-center py-2 px-4 text-sm flex-2"
+                  >
+                    קבלו הצעה
+                  </a>
+                  <a 
+                    href="https://wa.me/0546314848" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs text-center py-2 text-zinc-600 hover:text-zinc-900 underline"
+                  >
+                    או ב‑WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Row 1 — Basic */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Private Basic */}
-            <div className="rounded-2xl border p-6 bg-white h-full flex flex-col">
-              <h4 className="font-semibold text-lg">Basic — מבנה בלבד</h4>
-              <div className="mt-2 space-y-3 text-sm text-zinc-600">
-                <div>
-                  <p className="font-medium">עם מרתף</p>
-                  <p className="text-2xl font-bold">₪1,800–₪2,400</p>
-                </div>
-                <div>
-                  <p className="font-medium">עם בריכה</p>
-                  <p className="text-2xl font-bold">₪2,200–₪2,800</p>
-                </div>
-              </div>
-              <ul className="mt-3 text-sm text-zinc-600 space-y-1">
-                <li>• כיסוי מבנה בסיסי</li>
-                <li>• אופציה להוספת צד ג׳ / מים</li>
-              </ul>
-              {/* spacer to push CTA if added later */}
-              <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
-                <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm text-center">קבלו הצעה</a>
-                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
-              </div>
-            </div>
-
-            {/* Shared Basic */}
-            <div className="rounded-2xl border p-6 bg-white h-full flex flex-col">
-              <h4 className="font-semibold text-lg">Basic — מבנה בלבד</h4>
-              <div className="mt-2 space-y-3 text-sm text-zinc-600">
-                <div>
-                  <p className="font-medium">עם חניה תת קרקעית</p>
-                  <p className="text-2xl font-bold">₪1,100–₪1,500</p>
-                </div>
-                <div>
-                  <p className="font-medium">עם גג משותף</p>
-                  <p className="text-2xl font-bold">₪1,200–₪1,600</p>
-                </div>
-              </div>
-              <ul className="mt-3 space-y-1">
-                <li>• כיסוי מבנה משותף</li>
-                <li>• אופציה להרחבת צד ג׳</li>
-              </ul>
-              <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
-                <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 2 — Plus */}
-          <div className="grid md:grid-cols-2 gap-8 mt-6">
-            {/* Private Plus */}
-            <div className="rounded-2xl border p-6 bg-zinc-50 h-full flex flex-col">
-              <span className="self-start mb-2 inline-flex items-center rounded-full bg-black text-white text-xs px-3 py-1">מומלץ</span>
-              <h4 className="font-semibold text-lg">Plus — משולב</h4>
-              <div className="mt-2 space-y-3 text-sm text-zinc-600">
-                <div>
-                  <p className="font-medium">עם מרתף</p>
-                  <p className="text-2xl font-bold">₪3,200–₪4,600</p>
-                </div>
-                <div>
-                  <p className="font-medium">עם בריכה</p>
-                  <p className="text-2xl font-bold">₪3,800–₪5,200</p>
-                </div>
-              </div>
-              <ul className="mt-3 text-sm text-zinc-600 space-y-1">
-                <li>• מבנה + תכולה</li>
-                <li>• כולל צד ג׳ ומים/צנרת</li>
-              </ul>
-              <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
-                <a href="#contact" className="btn inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
-              </div>
-            </div>
-
-            {/* Shared Plus */}
-            <div className="rounded-2xl border p-6 bg-zinc-50 h-full flex flex-col">
-              <span className="self-start mb-2 inline-flex items-center rounded-full bg-black text-white text-xs px-3 py-1">מומלץ</span>
-              <h4 className="font-semibold text-lg">Plus — משולב</h4>
-              <div className="mt-2 space-y-3 text-sm text-zinc-600">
-                <div>
-                  <p className="font-medium">עם חניה תת קרקעית</p>
-                  <p className="text-2xl font-bold">₪2,300–₪2,900</p>
-                </div>
-                <div>
-                  <p className="font-medium">עם גג משותף</p>
-                  <p className="text-2xl font-bold">₪2,500–₪3,100</p>
-                </div>
-              </div>
-              <ul className="mt-3 space-y-1">
-                <li>• מבנה + תכולה</li>
-                <li>• כולל מים/צנרת</li>
-              </ul>
-              <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
-                <a href="#contact" className="btn inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 3 — Premium */}
-          <div className="grid md:grid-cols-2 gap-8 mt-6">
-            {/* Private Premium */}
-            <div className="rounded-2xl border p-6 bg-white h-full flex flex-col">
-              <h4 className="font-semibold text-lg">Premium — מלא</h4>
-              <div className="mt-2 space-y-3 text-sm text-zinc-600">
-                <div>
-                  <p className="font-medium">עם מרתף</p>
-                  <p className="text-2xl font-bold">₪5,500–₪7,500</p>
-                </div>
-                <div>
-                  <p className="font-medium">עם בריכה</p>
-                  <p className="text-2xl font-bold">₪6,200–₪8,000</p>
-                </div>
-              </div>
-              <ul className="mt-3 text-sm text-zinc-600 space-y-1">
-                <li>• מבנה + תכולה + צד ג׳ מוגדל</li>
-                <li>• כולל רעידת אדמה והרחבות</li>
-              </ul>
-              <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
-                <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
-              </div>
-            </div>
-
-            {/* Shared Premium */}
-            <div className="rounded-2xl border p-6 bg-white h-full flex flex-col">
-              <h4 className="font-semibold text-lg">Premium — מלא</h4>
-              <div className="mt-2 space-y-3 text-sm text-zinc-600">
-                <div>
-                  <p className="font-medium">עם חניה תת קרקעית</p>
-                  <p className="text-2xl font-bold">₪3,200–₪4,200</p>
-                </div>
-                <div>
-                  <p className="font-medium">עם גג משותף</p>
-                  <p className="text-2xl font-bold">₪3,600–₪4,800</p>
-                </div>
-              </div>
-              <ul className="mt-3 space-y-1">
-                <li>• מבנה + תכולה + צד ג׳ מוגדל</li>
-                <li>• רעידת אדמה והרחבות</li>
-              </ul>
-              <div className="mt-auto pt-4 flex flex-row gap-2 items-center">
-                <a href="#contact" className="btn-outline inline-block w-full md:w-auto px-4 py-2 text-sm">קבלו הצעה</a>
-                <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="mt-2 text-xs underline text-zinc-600 w-full md:w-auto inline-block text-center">או ב‑WhatsApp</a>
-              </div>
-            </div>
-          </div>
+          <p className="mt-3 text-xs text-zinc-500">
+            * טווחים נגזרו מהצעות מחיר לדוגמה (איה הנדסה, אירנה דוביצקי, אילנה סאפ, אבנר וישקין) ומעודכנים ל‑2025.
+          </p>
           <div className="rounded-2xl border p-4 mt-6 text-sm bg-white">
             <p className="text-zinc-700">
-              * המחירים משתנים לפי רשות, שטח בנוי, היסטוריית תביעות ודרישות בנק. ההצעה המחייבת תינתן רק לאחר קבלת פרטים מלאים.
+              * המחירים משתנים לפי רשות, שטח בנוי, היקף מערכות (כיבוי, ספרינקלרים, BIM) והיסטוריית פרויקט. ההצעה המחייבת תינתן רק לאחר קבלת פרטים מלאים.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Process */}
       <section id="process" className="section">
