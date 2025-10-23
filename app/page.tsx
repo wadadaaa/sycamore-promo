@@ -107,11 +107,11 @@ export default function Page() {
             {/* Header row */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] text-sm font-semibold bg-zinc-50">
               <div className="p-3 hidden md:block"></div>
-              <div className="p-3 text-center border-b md:border-b-0">
+              <div className="p-3 text-start border-b md:border-b-0">
                 <div className="font-semibold">ללא אישורים</div>
                 <div className="text-xs font-normal text-zinc-500 mt-0.5">תכנון בלבד</div>
               </div>
-              <div className="p-3 text-center">
+              <div className="p-3 text-start">
                 <div className="font-semibold">עם אישורים</div>
                 <div className="text-xs font-normal text-zinc-500 mt-0.5">כולל נספח + הגשה</div>
               </div>
