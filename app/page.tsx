@@ -1,5 +1,4 @@
 import Nav from "@/components/Nav";
-import LeadForm from "@/components/LeadForm";
 import { CheckCircle2, FileText, Upload, Clock, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 
 export default function Page() {
@@ -94,7 +93,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Pricing / Price Declaration */}
+      {/* Pricing / Price Declaration - ОБНОВЛЕННЫЕ ЦЕНЫ */}
       <section id="pricing" className="section">
         <div className="container">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">הצהרת מחיר</h2>
@@ -174,18 +173,18 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Row: בניין מגורים משותף */}
+            {/* Row: בניין מגורים משותף - ОБНОВЛЕНО */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] border-t">
               <div className="p-3 md:p-4 font-semibold bg-zinc-50 md:bg-white text-center md:text-right">
                 בניין מגורים משותף
               </div>
               
-              {/* Without approvals */}
+              {/* Without approvals - ОБНОВЛЕНО */}
               <div className="p-4 border-t md:border-t-0 md:border-r">
                 <div className="mb-2">
-                  <div className="text-lg font-semibold">₪2,000–₪2,600</div>
+                  <div className="text-lg font-semibold">₪2,000–₪2,400</div>
                   <div className="text-xs text-zinc-500 mt-0.5">לח״ד</div>
-                  <div className="text-xs text-zinc-500">או ₪90,000–₪140,000 סכום קבוע</div>
+                  <div className="text-xs text-zinc-500">או ₪80,000–₪120,000 סכום קבוע</div>
                 </div>
                 <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
                   <li>תכנון מערכות בניין משותף</li>
@@ -209,12 +208,12 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* With approvals */}
+              {/* With approvals - ОБНОВЛЕНО */}
               <div className="p-4 border-t md:border-t-0 bg-zinc-50/30">
                 <div className="mb-2">
-                  <div className="text-lg font-semibold">₪3,000–₪3,500</div>
+                  <div className="text-lg font-semibold">₪2,800–₪3,200</div>
                   <div className="text-xs text-zinc-500 mt-0.5">לח״ד</div>
-                  <div className="text-xs text-zinc-500">או ₪140,000–₪230,000 סכום קבוע</div>
+                  <div className="text-xs text-zinc-500">או ₪120,000–₪200,000 סכום קבוע</div>
                 </div>
                 <ul className="list-disc pr-5 space-y-1 text-sm text-zinc-700 mb-4">
                   <li>כולל נספח סניטרי מלא</li>
@@ -299,7 +298,7 @@ export default function Page() {
             {/* Row: Custom */}
             <div className="grid grid-cols-1 md:grid-cols-[minmax(150px,200px)_1fr_1fr] border-t">
               <div className="p-3 md:p-4 font-semibold bg-zinc-50 md:bg-white text-center md:text-right">
-              תאם אישית
+                Custom
               </div>
               
               {/* Without approvals */}
@@ -355,7 +354,19 @@ export default function Page() {
           <p className="mt-3 text-xs text-zinc-500">
             * טווחים נגזרו מהצעות מחיר לדוגמה (איה הנדסה, אירנה דוביצקי, אילנה סאפ, אבנר וישקין) ומעודכנים ל‑2025.
           </p>
-          <div className="rounded-2xl border p-4 mt-6 text-sm bg-white">
+          
+          {/* NEW: Блок со скидками на объем */}
+          <div className="rounded-2xl border p-4 mt-4 text-sm bg-blue-50 border-blue-200">
+            <p className="font-semibold text-blue-900 mb-2">💡 הנחות על פי היקף הפרויקט</p>
+            <ul className="text-blue-800 space-y-1">
+              <li>• פרויקטים עד 20 יח״ד: מחיר בסיסי</li>
+              <li>• פרויקטים 21-50 יח״ד: הנחה של 10%</li>
+              <li>• פרויקטים 51-80 יח״ד: הנחה של 15%</li>
+              <li>• פרויקטים מעל 80 יח״ד: הצעת מחיר אישית</li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border p-4 mt-4 text-sm bg-white">
             <p className="text-zinc-700">
               * המחירים משתנים לפי רשות, שטח בנוי, היקף מערכות (כיבוי, ספרינקלרים, BIM) והיסטוריית פרויקט. ההצעה המחייבת תינתן רק לאחר קבלת פרטים מלאים.
             </p>
@@ -417,57 +428,128 @@ export default function Page() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="section">
-        <div className="container grid md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">צור קשר</h2>
-            <p className="muted mb-6">השאירו פרטים ונחזור אליכם עם צ'ק ליסט מותאם לעיר שלכם.</p>
-            <LeadForm />
+      <section id="contact" className="section bg-gradient-to-b from-white to-zinc-50">
+        <div className="container max-w-5xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">בואו נדבר</h2>
+            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
+              השאירו פרטים ונחזור אליכם תוך 24 שעות עם הצעת מחיר מדויקת
+            </p>
           </div>
-          <div className="rounded-2xl border p-6">
-            <h3 className="font-semibold mb-4 text-xl">פרטי קשר</h3>
 
-            <ul className="space-y-3 text-sm text-zinc-700">
-              <li className="flex items-center justify-between md:justify-start gap-3">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-zinc-500" aria-hidden />
-                  <span className="text-zinc-500">טלפון</span>
-                </div>
-                <a href="tel:0546314848" className="font-medium hover:underline">0546314848</a>
-              </li>
-              <li className="flex items-center justify-between md:justify-start gap-3">
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-zinc-500" aria-hidden />
-                  <span className="text-zinc-500">אימייל</span>
-                </div>
-                <a href="mailto:hello@sycamore.co.il" className="font-medium hover:underline">hello@sycamore.co.il</a>
-              </li>
-              <li className="flex items-center justify-between md:justify-start gap-3">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-zinc-500" aria-hidden />
-                  <span className="text-zinc-500">שעות פעילות</span>
-                </div>
-                <span className="font-medium">א׳–ה׳ 9:00–18:00</span>
-              </li>
-              <li className="flex items-center justify-between md:justify-start gap-3">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-zinc-500" aria-hidden />
-                  <span className="text-zinc-500">אזור שירות</span>
-                </div>
-                <span className="font-medium">מרכז + גוש דן</span>
-              </li>
-            </ul>
+          {/* Main Contact Card */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Quick Contact - Prominent CTA */}
+            <div className="rounded-3xl bg-gradient-to-br from-green-500 to-green-600 p-8 text-white shadow-xl">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">רוצים להתחיל מהר?</h3>
+                <p className="text-green-100">שלחו לנו הודעה ב-WhatsApp ונחזור תוך דקות</p>
+              </div>
+              
+              <a 
+                href="https://wa.me/0546314848" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center justify-center gap-3 bg-white text-green-600 font-semibold py-4 px-6 rounded-2xl hover:bg-green-50 transition-all hover:scale-105 shadow-lg mb-4"
+              >
+                <MessageCircle className="w-6 h-6" />
+                <span className="text-lg">שלח הודעה ב-WhatsApp</span>
+              </a>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-2">
-              <a href="tel:0546314848" className="btn-outline sm:flex-1 text-center" aria-label="התקשרו אלינו">התקשרו</a>
-              <a href="mailto:hello@sycamore.co.il" className="btn-outline sm:flex-1 text-center" aria-label="כתבו לנו אימייל">מייל</a>
-              <a href="https://wa.me/0546314848" target="_blank" rel="noreferrer" className="btn sm:flex-1 text-center" aria-label="פתיחת WhatsApp">WhatsApp</a>
+              <div className="space-y-3 pt-4 border-t border-green-500">
+                <div className="flex items-center gap-3 text-green-50">
+                  <Phone className="w-5 h-5" />
+                  <a href="tel:0546314848" className="hover:text-white text-lg">0546314848</a>
+                </div>
+                <div className="flex items-center gap-3 text-green-50">
+                  <Mail className="w-5 h-5" />
+                  <a href="mailto:hello@sycamore.co.il" className="hover:text-white">hello@sycamore.co.il</a>
+                </div>
+              </div>
             </div>
 
-            <p className="text-xs text-zinc-500 mt-3">מענה מהיר ב-WhatsApp ובשעות הפעילות בטלפון.</p>
+            {/* Info Card */}
+            <div className="rounded-3xl bg-white border-2 border-zinc-200 p-8 shadow-lg">
+              <h3 className="text-xl font-bold mb-6">פרטים נוספים</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-zinc-900 mb-1">שעות פעילות</div>
+                    <div className="text-zinc-600">א׳–ה׳ 9:00–18:00</div>
+                    <div className="text-sm text-zinc-500 mt-1">מענה מהיר ב-WhatsApp גם מחוץ לשעות העבודה</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-zinc-900 mb-1">אזור שירות</div>
+                    <div className="text-zinc-600">מרכז + גוש דן</div>
+                    <div className="text-sm text-zinc-500 mt-1">פרויקטים מיוחדים בכל הארץ</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-zinc-900 mb-1">זמן תגובה</div>
+                    <div className="text-zinc-600">תוך 24 שעות</div>
+                    <div className="text-sm text-zinc-500 mt-1">מחויבים למענה מהיר ומקצועי</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Alternative Contact Methods */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="tel:0546314848" 
+              className="btn-outline px-8 py-4 text-center text-lg hover:bg-zinc-50"
+            >
+              <Phone className="w-5 h-5 inline-block ml-2" />
+              התקשרו עכשיו
+            </a>
+            <a 
+              href="mailto:hello@sycamore.co.il" 
+              className="btn-outline px-8 py-4 text-center text-lg hover:bg-zinc-50"
+            >
+              <Mail className="w-5 h-5 inline-block ml-2" />
+              שלחו אימייל
+            </a>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-6 px-8 py-4 bg-white rounded-2xl border border-zinc-200 shadow-sm">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-green-600" />
+                <span className="text-sm font-medium">100% שביעות רצון</span>
+              </div>
+              <div className="h-6 w-px bg-zinc-300"></div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-blue-600" />
+                <span className="text-sm font-medium">מענה תוך 24 שעות</span>
+              </div>
+              <div className="h-6 w-px bg-zinc-300"></div>
+              <div className="flex items-center gap-2">
+                <FileText className="w-5 h-5 text-purple-600" />
+                <span className="text-sm font-medium">הצעת מחיר חינם</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Sticky mobile CTA */}
       <div className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t p-3">
